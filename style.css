@@ -394,5 +394,117 @@ header .right-item {
   "work   work    ic    ic"
   "work   work    ic    ic"
   "lo     lo      lo    lo";
+  max-width: 1280px;
+  width: 100%;
+  padding: 100px 0px;
+  row-gap: 15px;
+  column-gap: 50px;
 }
+
+.main-container .work-with-us span {
+  grid-area: go;
+  font-size: 16px;
+  color: #505606
+}
+.main-container .work-with-us .work-details {
+  grid-area: work;
+  font-size: 18px;
+  line-height: 27px;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+.main-container .work-with-us .work-details button {
+  border: none;
+  border-radius: 5px;
+  background-color: #00DDDD;
+  padding: 15px 25px;
+  font-weight: 600;
+  color: white;
+  align-self: flex-start;
+}
+.main-container .work-with-us .work-details h4 {
+  font-size: 40px;
+  font-weight: 600;
+}
+.main-container .work-with-us .icons {
+  grid-area: ic;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(auto, 314px));
+}
+.main-container .work-with-us .icons .icons-item {
+  display: grid;
+  grid-template-columns: 112px auto;
+  justify-content: left;
+  align-items: center;
+  column-gap: 20px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+
+.main-container .work-with-us .companies {
+  grid-area: lo;
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  padding: 60px 0px;
+}
+.main-container .work-with-us .companies img {
+  width: 100%;
+}
+
 /*/WORK WITH US*/
+
+/*FOOTER*/
+
+footer {
+  width: 100%;
+  background-color: black;
+  display: grid;
+  color: white;
+}
+
+footer .links {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1280px;
+  width: 98%;
+  justify-self: center;
+  padding: 60px 0px 20px 0px;
+}
+
+footer .links .logo {
+  grid-column: span 2;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+}
+footer .links .logo .heart {
+  
+  font-size: 24px;
+  padding: 10px 0px;
+}
+
+footer .links .logo .socials {
+  display: flex;
+}
+
+footer .links .more-tnw {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+footer .links .more-tnw h4 {
+  font-size: 24px;
+  line-height: 36px;
+  font-weight: 600px;
+}
+
+footer .copyright {
+  border-top: 1px solid gray;
+  display: flex;
+  flex-direction: column;
+  padding: 40px 0px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
