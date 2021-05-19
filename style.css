@@ -6,6 +6,10 @@ blockquote,q { quotes: none;}
 blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
 table { border-collapse: collapse; border-spacing: 0;}
 
+html * {
+  font-family: sans-serif;
+}
+
 header {
   height: 45px;
   display: grid;
@@ -55,7 +59,7 @@ header .right-item {
 .main-container .news {
   display: grid;
   max-width: 1535px;
-  width: 97%;
+  width: 98%;
   grid-template-columns: repeat(4, minmax(230px, 1fr));
   grid-template-rows: repeat(5, 126px);
   grid-template-areas: 
@@ -65,6 +69,7 @@ header .right-item {
   "two two four four"
   "two two four four";
   gap: 10px 10px;
+  padding: 50px 0px;
 }
 
 .main-container .news .text {
@@ -75,7 +80,44 @@ header .right-item {
   justify-content: flex-end;
   padding: 20px;
   box-sizing: border-box;
+  gap: 10px;
 }
+
+.main-container .news .big h2 {
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 40px;
+}
+.main-container .news .small h2 {
+  font-size: 20px;
+  line-height: 23px;
+  font-weight: 500;
+}
+.main-container .news .ad {
+  align-items: center;
+  justify-content: center;
+}
+.main-container .news .ad h2 {
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 24px;
+}
+.main-container .news .ad button {
+  border: 1px solid white;
+  color: white;
+  background-color:rgba(0, 0, 0, 0);
+  border-radius: 100px;
+  padding: 15px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  margin-top: 20px;
+}
+.main-container .news .text p {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 14px;
+}
+
 .main-container .news .one {
   grid-area: one;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/google-io.jpeg");
@@ -120,4 +162,97 @@ header .right-item {
   background-size: cover;
 } */
 
+.main-container .popular-articles {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 65px 0px;
+  background-color: #F7F8F8;
+  width: 100%;
+  gap: 75px;
+}
 
+.main-container .popular-articles .title {
+  font-size: 32px;
+  line-height: 48px;
+  font-weight: 700;
+  color: #a7aab2;
+}
+
+.main-container .popular-articles .columns{
+  display: grid;
+  grid-template-columns: repeat(5, minmax(auto, 269px));
+  justify-content: center;
+  column-gap: 30px;
+  width: 98%;
+}
+
+.main-container .popular-articles .columns .item {
+  display: flex;
+  gap: 15px;
+}
+.main-container .popular-articles .columns .item span {
+  font-size: 38px;
+  font-weight: 800;
+  color: #cc0099;
+  font-family: 'Arial Narrow';
+}
+.main-container .popular-articles .columns .item p {
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/*LATEST STORIES*/
+
+.main-container .latest-stories {
+  display: flex;
+  flex-direction: column;
+  padding: 120px 0px;
+  max-width: 1280px;
+  width: 98%;
+  align-items: center;
+}
+.main-container .latest-stories h2 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.main-container .latest-stories .stories {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-auto-rows: min-content;
+  gap: 30px;
+  padding: 50px 0px;
+}
+
+.main-container .latest-stories .stories .item img {
+  object-fit: cover; /*makes the image not distort when the container resizes*/
+  width: 100%;
+}
+
+.main-container .latest-stories .stories .item h3 {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 600;
+}
+
+.main-container .latest-stories .stories .item span {
+  font-size: 14px;
+  line-height: 21px;
+  font-weight: 400;
+  color: #a7aab2;
+}
+
+.main-container .latest-stories button {
+  border: 1px solid #a7aab2;
+  color: black;
+  background-color:rgba(0, 0, 0, 0);
+  border-radius: 100px;
+  padding: 15px 20px;
+  font-size: 13px;
+  font-weight: 600;
+  width: 130px;
+}
+
+/*LATEST STORIES*/
