@@ -1,0 +1,123 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video { margin: 0; padding: 0; border: 0; font-size: 100%; font: inherit; vertical-align: baseline;}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section { display: block;}
+body { line-height: 1;}
+ol,ul { list-style: none;}
+blockquote,q { quotes: none;}
+blockquote:before,blockquote:after,q:before,q:after { content: ''; content: none;}
+table { border-collapse: collapse; border-spacing: 0;}
+
+header {
+  height: 45px;
+  display: grid;
+  grid-template-columns: min-content 1fr min-content;
+  justify-items: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 14px;
+  line-height: 45px;
+  color: black;
+  box-shadow: 0px 0px 100px 0px #EEEEEE; 
+}
+
+header .navbar {
+  display: flex;
+  gap: 20px;
+}
+
+header .left-item {
+  padding: 0px 20px;
+}
+header .right-item {
+  padding: 0px 10px;
+}
+
+.main-container {
+  display: grid;
+  grid-template-rows: repeat(7, min-content);
+  grid-template-columns: 1fr;
+  justify-content: center;
+  justify-items: center;
+  font-family: sans-serif;
+}
+
+.main-container .the-heart-of-tech {
+  display: grid;
+  width: 95%;
+  max-width: 1150px;
+  grid-template-columns: 1fr auto;
+  height: 181px;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  line-height: 48px;
+}
+
+.main-container .news {
+  display: grid;
+  max-width: 1535px;
+  width: 97%;
+  grid-template-columns: repeat(4, minmax(230px, 1fr));
+  grid-template-rows: repeat(5, 126px);
+  grid-template-areas: 
+  "one one three five"
+  "one one three five"
+  "one one four four"
+  "two two four four"
+  "two two four four";
+  gap: 10px 10px;
+}
+
+.main-container .news .text {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  height: 100%;
+  justify-content: flex-end;
+  padding: 20px;
+  box-sizing: border-box;
+}
+.main-container .news .one {
+  grid-area: one;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/google-io.jpeg");
+}
+.main-container .news .two {
+  grid-area: two;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/next_home-promo_tnw2021-1146x372.jpg");
+}
+.main-container .news .three {
+  grid-area: three;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/loseless.jpeg");
+}
+.main-container .news .four {
+  grid-area: four;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/Sonos-Roam_2021-05-18-085631_sftc.jpeg");
+}
+
+.main-container .news .five {
+  grid-area: five;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/keystrokes.jpeg");
+}
+
+
+.main-container .news img {
+  object-fit: cover;
+  width: 100%;
+}
+
+.main-container .news div {
+  background-size: cover;
+  background-position: center;
+}
+
+/* .main-container .news div::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/google-io.jpeg");
+  background-size: cover;
+} */
+
+
