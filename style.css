@@ -21,10 +21,15 @@ header {
   line-height: 45px;
   color: black;
   box-shadow: 0px 0px 100px 0px #EEEEEE; 
-  position: fixed;
+  position: sticky;
   top: 0;
   background-color: white;
   width: 100%;
+  z-index: 100;
+}
+
+header #grid-icon {
+  display: none;
 }
 
 header .navbar {
@@ -60,7 +65,15 @@ header .right-item {
   line-height: 48px;
 }
 
+#two {
+  display: none;
+}
 .main-container .news {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.main-container .news .news-container .child-container {
   display: grid;
   max-width: 1535px;
   width: 98%;
@@ -76,7 +89,7 @@ header .right-item {
   padding: 50px 0px;
 }
 
-.main-container .news .text {
+.main-container .news .news-container .child-container .text {
   display: flex;
   flex-direction: column;
   color: white;
@@ -87,26 +100,28 @@ header .right-item {
   gap: 10px;
 }
 
-.main-container .news .big h2 {
+.main-container .news .news-container .child-container .big h2 {
   font-size: 40px;
   font-weight: 700;
   line-height: 40px;
 }
-.main-container .news .small h2 {
+.main-container .news .news-container .child-container .small h2 {
   font-size: 20px;
   line-height: 23px;
   font-weight: 500;
 }
-.main-container .news .ad {
+.main-container .news .news-container .child-container .ad {
   align-items: center;
   justify-content: center;
+  text-align: center;
 }
-.main-container .news .ad h2 {
+
+.main-container .news .news-container .child-container .ad h2 {
   font-weight: 600;
   font-size: 24px;
   line-height: 24px;
 }
-.main-container .news .ad button {
+.main-container .news .news-container .child-container .ad button {
   border: 1px solid white;
   color: white;
   background-color:rgba(0, 0, 0, 0);
@@ -116,41 +131,41 @@ header .right-item {
   font-weight: 600;
   margin-top: 20px;
 }
-.main-container .news .text p {
+.main-container .news .news-container .child-container .text p {
   font-size: 14px;
   font-weight: 400;
   line-height: 14px;
 }
 
-.main-container .news .one {
+.main-container .news .news-container .child-container .one {
   grid-area: one;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/google-io.jpeg");
 }
-.main-container .news .two {
+.main-container .news .news-container .child-container .two {
   grid-area: two;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/next_home-promo_tnw2021-1146x372.jpg");
 }
-.main-container .news .three {
+.main-container .news .news-container .child-container .three {
   grid-area: three;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/loseless.jpeg");
 }
-.main-container .news .four {
+.main-container .news .news-container .child-container .four {
   grid-area: four;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/Sonos-Roam_2021-05-18-085631_sftc.jpeg");
 }
 
-.main-container .news .five {
+.main-container .news .news-container .child-container .five {
   grid-area: five;
   background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/keystrokes.jpeg");
 }
 
 
-.main-container .news img {
+.main-container .news .news-container .child-container img {
   object-fit: cover;
   width: 100%;
 }
 
-.main-container .news div {
+.main-container .news .news-container .child-container div {
   background-size: cover;
   background-position: center;
 }
@@ -184,7 +199,7 @@ header .right-item {
   color: #a7aab2;
 }
 
-.main-container .popular-articles .columns{
+.main-container .popular-articles .columns {
   display: grid;
   grid-template-columns: repeat(5, minmax(auto, 269px));
   justify-content: center;
@@ -263,15 +278,21 @@ header .right-item {
 /*LATEST STORIES*/
 
 /*EXPLORE*/
-.main-container .explore {
+.main-container .explore-container .explore {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 1520px;
-  background-color: #F7F8F8;
   padding: 135px 0px;
   gap: 70px;
+}
+
+.main-container .explore-container {
+  background-color: #F7F8F8;
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
 
 .main-container .explore h2 {
@@ -307,6 +328,8 @@ header .right-item {
   text-align: center;
   font-weight: 600;
 }
+
+
 
 .main-container .explore .channels .item1 {
   background-image: url("https://img-cdn.tnwcdn.com/image?fit=215%2C265&url=https%3A%2F%2Fnext.tnwcdn.com%2Fassets%2Fnext%2Fimg%2Fbackdrop-s-plugged.jpg&signature=7702697239da7f47625866f9bd0b7cad");
@@ -358,7 +381,7 @@ header .right-item {
   position: relative;
 }
 .main-container .newsletter input {
-  width: inherit;
+  width: 100%;
   height: inherit;
   border: none;
   border-radius: 5px;
@@ -375,6 +398,8 @@ header .right-item {
   top: 16px;
   right: 10px;
   color: #bdbdbd;
+  font-weight: 600;
+  font-size: 14px;
 }
 
 .main-container .newsletter .social-icons {
@@ -486,6 +511,7 @@ footer .links .logo .heart {
 
 footer .links .logo .socials {
   display: flex;
+  padding-top: 30px;
 }
 
 footer .links .more-tnw {
@@ -507,4 +533,182 @@ footer .copyright {
   justify-content: center;
   align-items: center;
   gap: 10px;
+}
+
+@media screen and (max-width: 1024px) {
+
+  header {
+    grid-template-columns: min-content min-content;
+  }
+  header .navbar, .right-item {
+    display: none;
+  }
+  header #grid-icon {
+    display: inline;
+    padding-left: 30px;
+  }
+
+  /*NEWS*/
+  .main-container .news .news-container .child-container {
+    display: grid;
+    max-width: 1535px;
+    width: 87%;
+    grid-template-columns: repeat(4, minmax(auto, 1fr));
+    grid-template-rows: repeat(4, 190px);
+    grid-template-areas:
+    "one one one one"
+    "one one one one"
+    "three three two two"
+    "five five four four";
+    gap: 10px 10px;
+    padding: 50px 0px;
+  }
+
+  .main-container .news .news-container .child-container .text h2 {
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 22px;
+  }
+  /*/NEWS*/
+
+  /*POPULAR ARTICLES*/
+  .main-container .popular-articles .columns {
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+    justify-content: center;
+    column-gap: 30px;
+    width: 87%;
+  }
+  /*/POPULAR ARTICLES*/
+
+  /*LATEST STORIES*/
+  .main-container .latest-stories {
+    width: 87%;
+  }
+
+  .main-container .latest-stories .stories {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: min-content;
+    gap: 30px;
+    padding: 50px 0px;
+  }
+  /*/LATEST STORIES*/
+
+  /*EXPLORE*/
+    .main-container .explore-container .explore .channels :nth-child(5) {
+      margin: 40px;
+      display: none;
+      /*visibility: hidden*/
+    }
+
+    .main-container .explore-container .explore {
+      width: 87%;
+    }
+
+    .main-container .explore .channels {
+      grid-template-columns: repeat(4, 1fr);
+    }
+  /*/EXPLORE*/
+
+  /*NEWSLETTER*/
+  .main-container .newsletter h2 {
+    font-size: 32px;
+    font-weight: 600;
+    white-space: nowrap;
+  }
+  
+  .main-container .newsletter .input-field {
+    width: 100%;
+    height: 48px;
+    position: relative;
+  }
+  /*/NEWSLETTER*/
+
+  /*WORK WITH US*/
+  .main-container .work-with-us {
+    width: 87%
+  }
+  .main-container .work-with-us .companies {
+    grid-area: lo;
+    display: grid;
+    width: 80%;
+    grid-template-columns: repeat(6, 1fr);
+    padding: 60px 0px;
+    justify-self: center;
+  }
+  .main-container .work-with-us .companies * {
+    grid-column: span 2;
+  }
+  .main-container .work-with-us .companies :nth-last-child(2) { /*selects the second last child*/
+    grid-column-start: 2;
+    grid-column-end: span 2;
+  }
+  /*/WORK WITH US*/
+
+  /*FOOTER*/
+  footer .links {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    max-width: 1280px;
+    width: 87%;
+    justify-self: center;
+    padding: 60px 0px 20px 0px;
+  }
+  /*/FOOTER*/
+}
+
+@media screen and (max-width: 768px) {
+  /*NEWS*/
+  .main-container .news .news-container {
+    width: 100vw;
+    overflow-y: hidden;
+    overflow-x: auto;
+  }
+
+  .main-container .news .news-container .child-container {
+    display: grid;
+    padding: 0px 20px;
+    width: 100%;
+    grid-template-columns: repeat(auto-fit, auto);
+    grid-template-rows: 600px;
+    grid-template-areas:
+    "one three four five";
+    gap: 10px 10px;
+    white-space: nowrap;
+  }
+
+  .main-container .news .news-container .child-container .two {
+    display: none;
+  }
+
+  #two {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    grid-area: two;
+    background-image: linear-gradient(rgba(255, 255, 255, 0), rgb(0, 0, 0)), url("https://s3.amazonaws.com/events.tnw/hardfork-2018/uploads/visuals/next_home-promo_tnw2021-1146x372.jpg");
+    width: 100%;
+    background-position: 50% 0%;
+    background-size: 300%;
+    height: 218px;
+    flex-direction: column;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+    color: white;
+  }
+  #two button {
+    margin: 10px 0px;
+    border: 1px solid white;
+    color: white;
+    background-color:rgba(0, 0, 0, 0);
+    border-radius: 100px;
+    padding: 15px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-top: 20px;
+  }
 }
