@@ -578,7 +578,7 @@ footer .copyright {
     row-gap: 30px;
     justify-content: center;
     column-gap: 30px;
-    width: 87%;
+    width: 80%;
   }
   /*/POPULAR ARTICLES*/
 
@@ -667,6 +667,11 @@ footer .copyright {
     overflow-x: auto;
   }
 
+  .main-container .news .news-container .text {
+    width: 634px ;
+    height: 634px;
+  }
+
   .main-container .news .news-container .child-container {
     display: grid;
     padding: 0px 20px;
@@ -711,4 +716,94 @@ footer .copyright {
     font-weight: 600;
     margin-top: 20px;
   }
+  /*/NEWS*/
+
+  /*LATEST STORIES*/
+  .main-container .latest-stories {
+    width: 80%;
+  }
+
+  .main-container .latest-stories .stories {
+    grid-template-columns: 1fr;
+  }
+
+  .main-container .latest-stories .stories .item {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto 1fr;
+    grid-template-areas: 
+    "im ti"
+    "im hr";
+    column-gap: 30px;
+  }
+  .main-container .latest-stories .stories .item img {
+    border-radius: 50%;
+    background-size: cover;
+    width: 175px;
+    height: 175px;
+    grid-row: span 2;
+  }
+
+  .main-container .latest-stories button {
+    width: 100%;
+  }
+  /*/LATEST STORIES*/
+
+  /*NEWSLETTER*/
+  .main-container .newsletter h2 {
+    font-size: 24px;
+  }
+  .main-container .newsletter p {
+    text-align: center;
+  }
+  /*/NEWSLETTER*/
+
+  /*WORK-WITH-US*/
+  .main-container .work-with-us {
+    grid-template-columns: 1fr;
+    width: 87%;
+    grid-template-areas: 
+    "go"
+    "work"
+    "ic"
+    "lo";
+    justify-content: center;
+    justify-items: center;
+    row-gap: 70px;
+  }
+
+  .main-container .work-with-us .work-details {
+    align-items: center;
+  }
+  .main-container .work-with-us .work-details button {
+    align-self: center;
+  }
+
+  .main-container .work-with-us .icons {
+    justify-content: center;
+    justify-items: center;
+    row-gap: 50px;
+  }
+  .main-container .work-with-us .icons .icons-item {
+    grid-template-columns: 1fr;
+    width: 96px;
+    justify-items: center;
+    row-gap: 20px;
+  }
+
+  .main-container .work-with-us .companies {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .main-container .work-with-us .companies * {
+  grid-column: span 1;
+  }
+  .main-container .work-with-us .companies :nth-last-child(2) {
+    grid-column-start: 1;
+    grid-column-end: span 1;
+  }
+
+  .main-container .work-with-us .work-details p {
+    width: 87%;
+  }
+  /*/WORK-WITH-US*/
 }
